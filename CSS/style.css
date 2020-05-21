@@ -4,17 +4,35 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #logo{
     font-family: 'Nosifer', cursive;
     font-size: 50px;
+    margin-left: 15%;
+    letter-spacing: 0.9em;
 }
 .navbar {
     font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
     letter-spacing: 0.2em;
     
+}
+.navbar-nav{
+    margin-left: 20%;
+}
+.navbar a {
+    margin-left: 20px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.navbar a:hover {
+    font-weight: 900;
+    color: salmon;
+    transition-duration: 0.3s;
+   
 }
 body,html {
     height: 100%;
@@ -30,6 +48,7 @@ body,html {
     
 }
 
+
 .content {
     color: white;
     position: absolute;
@@ -39,9 +58,21 @@ body,html {
     
 }
 .btn {
+    font-family: 'Montserrat', sans-serif;
     height: 50px;
     margin-left: 50px;
     letter-spacing: 0.2em;
+    font-weight: 700;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: white;
+    width: 200px;
+    transition: ease-in;
+    transition-duration: 0.5s;
+    font-weight: 900;
+    background-color: rgb(247, 161, 3);
 }
 .bg-dark{
     background-color: rgba(0,0,0,1) !important;
@@ -49,10 +80,29 @@ body,html {
 h1{
     
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
     letter-spacing: 0.3em;
+    
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em; 
+    margin-left: 200px;
 }
 h4{
     font-family: 'Lovers Quarrel', cursive;
     font-size: 60px;
+}
+.col-md-12{
+    margin-top: 30px;
+}
+.col-md-6{
+    margin-left: 200px;
+}
+.col-md-4 img{
+    width: 60%;
+    height: auto;
+}
+p{
+ font-size: 18px;   
 }
