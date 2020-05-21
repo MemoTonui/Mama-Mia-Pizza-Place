@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Fredericka+the+Great&family=Lovers+Quarrel&family=Montserrat:wght@800&family=Nosifer&family=Raleway&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Fredericka+the+Great&family=Lovers+Quarrel&family=Nosifer&family=Raleway&family=Rye&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#logo{
+    font-family: 'Nosifer', cursive;
+    font-size: 50px;
+}
+.navbar {
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 0.2em;
+    
+}
+body,html {
+    height: 100%;
+}
+.home{
+    background-image: url("../Images/Home.jpg");
+    background-color: rgba(0,0,0,0.65);
+    background-blend-mode: darken;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50%;
+    
+}
+
+.content {
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    opacity: 1;
+    
+}
+.btn {
+    height: 50px;
+    margin-left: 50px;
+    letter-spacing: 0.2em;
+}
+.bg-dark{
+    background-color: rgba(0,0,0,1) !important;
+}
+h1{
+    
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+h4{
+    font-family: 'Lovers Quarrel', cursive;
+    font-size: 60px;
+}
