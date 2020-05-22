@@ -130,10 +130,31 @@ p{
   .col-md-12 p {
       margin-left: 200px;
   }
-  input {
-      background-color: rgba(0,0,0,1);
-      color: white;
-  }
+ 
   .btn-block {
       margin-left: unset;
+  }
+  .btn-info:hover{
+      width: 100%;
+      background-color: thistle;
+      color: black;
+      transition: 1.5s ease-in-out;
+      margin-left: unset;
+  }
+
+  /*Modal*/
+  .modal-header {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+   .modal-body {
+    padding: 40px 50px;
+  }
+  .btn-danger:hover{
+      width: 100%;
+      background-color: red;
+
   }
