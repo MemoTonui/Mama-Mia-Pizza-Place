@@ -158,10 +158,14 @@ p{
       background-color:darkred;
 
   }
-  #order{
+  h4#order{
       font-family: 'Nosifer', cursive;
+      
   }
   h4#makeYourOwnHead{
       font-size: 40px;
       font-family: 'Nosifer', cursive;
+  }
+  .radio-inline{
+      margin-right: 50px;
   }

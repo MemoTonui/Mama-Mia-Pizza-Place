@@ -130,12 +130,16 @@
             </div>
             <div class="form-group">
               <label for="side"> Choose a side</label>
-              <em>(Please select one)</em>
-              <select  class="form-control" id="side" >
-                <option>Soup</option>
-                <option>Salad</option>
-                <option>Ketchup</option>
-                 </select>
+              <em>(Please select one)</em> <br>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="radio1" value="salad"> Salad
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="radio2" value="ketchup"> Ketchup
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="radio3" value="soup"> Soup
+              </label>
             </div>
             <div class="form-group">
               <label for="toppings"> Extra Toppings</label>
@@ -205,7 +209,8 @@
         <div class="modal-body">
           <form role="form">
             <div class="form-group">
-              <label for="size"> Size</label>
+              <em class="text-center">We deliver to you all the ingredients you need to assemble your own Pizza at home</em><br><br>
+              <label for="size"> Size of the dough</label>
               <select  class="form-control" id="size" >
                 <option>Small</option>
                 <option>Medium</option>
@@ -216,23 +221,23 @@
             </div>
             <div class="form-group">
               <label for="side"> Choose a side</label>
-              <em>(Please select one)</em>
-              <select  class="form-control" id="side" >
-                <option>Soup</option>
-                <option>Salad</option>
-                <option>Ketchup</option>
-                 </select>
+              <em>(Please select one)</em> <br>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="salad"> Salad
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="ketchup"> Ketchup
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="soup"> Soup
+              </label>
             </div>
             <div class="form-group">
-              <label for="toppings"> Extra Toppings</label>
-              <select  class="form-control" id="toppings" >
-                <option>Bacon</option>
-                <option>Cheese</option>
-                <option>Tomatoes</option>
-                <option>Chicken</option>
-                <option>Pineapple</option>
-                <option>Beef</option>
-              </select>
+              <label for="toppings"> Choose Your Toppings</label>
+              <label class="checkbox-inline"><input type="checkbox" value="">Cheese</label>
+              <label class="checkbox-inline"><input type="checkbox" value="">Sauce</label>
+              <label class="checkbox-inline"><input type="checkbox" value="">Bacon</label>
+              
             </div>
             <div class="form-group">
               <label for="toppings"><span class="glyphicon glyphicon-shopping-cart"></span> Should we include a drink for you?</label>
