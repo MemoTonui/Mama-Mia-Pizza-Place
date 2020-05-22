@@ -127,3 +127,13 @@ p{
       margin-top: 50px;
       font-family: 'Nosifer', cursive;
   }
+  .col-md-12 p {
+      margin-left: 200px;
+  }
+  input {
+      background-color: rgba(0,0,0,1);
+      color: white;
+  }
+  .btn-block {
+      margin-left: unset;
+  }
