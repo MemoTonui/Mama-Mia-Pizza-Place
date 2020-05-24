@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="JS/script.css"></script>
+    <script src="JS/script.js"></script>
     <title>MAMA MIA</title>
 </head>
 <body>
@@ -75,33 +75,34 @@
         <div class="col-sm-3 ">
           <div class="thumbnail">
             <img src="Images/periperi.jpeg" alt="Chicken periperi">
-            <p><strong>Chicken Periperi pizza</strong></p>
+            <p value="Chicken Periperi"><strong>Chicken Periperi pizza</strong></p>
             
-            <button class="btn btn-dark" data-toggle="modal" data-target="#order">Order Now</button>
+            <button class="btn btn-dark orderNow" data-toggle="modal" data-target="#order">Order Now</button>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="thumbnail">
             <img src="Images/bacon-mushroom.jpeg" alt="New York">
-            <p><strong>Bacon-mushroom pizza</strong></p>
+            <p value="Bacon Mushroom"><strong>Bacon-mushroom pizza</strong></p>
             
-            <button class="btn btn-dark" data-toggle="modal" data-target="#order">Order Now</button>
+            <button class="btn btn-dark orderNow" data-toggle="modal" data-target="#order">Order Now</button>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="thumbnail">
             <img src="Images/pizza6.jpeg" alt="New York">
-            <p><strong>Barbeque steak</strong></p>
+            <p value="Barbeque steak"><strong>Barbeque steak</strong></p>
+
             
-            <button class="btn btn-dark" data-toggle="modal" data-target="#order">Order Now</button>
+            <button class="btn btn-dark orderNow" data-toggle="modal" data-target="#order">Order Now</button>
           </div>
         </div>
         <div class="col-sm-3">
           <div class="thumbnail">
             <img src="Images/barbeque.jpeg" alt="San Francisco">
-            <p><strong>Barbeque chicken pizaa</strong></p>
+            <p value="Barbeque chicken"><strong>Barbeque chicken pizaa</strong></p>
             
-            <button class="btn btn-dark" data-toggle="modal" data-target="#order">Order Now</button>
+            <button class="btn btn-dark orderNow" data-toggle="modal" data-target="#order">Order Now</button>
           </div>
         </div>
       </div>
@@ -121,16 +122,71 @@
             <div class="form-group">
               <label for="size"> Size</label>
               <select  class="form-control" id="size" >
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
-                <option>Extra Large</option>
-                <option>Super Duper Large</option>
+                <option id="small" value="small">Small </option>
+                <option id="medium" value="medium">Medium </option>
+                <option id="large" value="large">Large </option>
+                <option id="xLarge" value="xLarge">Extra Large </option>
+                <option id= "sdLarge" value="sdLarge">Super Duper Large</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="side"> How Do You want your crust?</label> <br>
+              
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="crispy" value="crispy"> Crispy
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="stuffed" value="stuffed"> Stuffed
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="gluten" value="gluten"> Gluten-free
+              </label>
+            </div>
+           
+            <div class="form-group">
+              <label for="toppings"> Extra Toppings  </label>
+              <em>(Extra toppings cost KSH.150 each)</em>
+              <p>
+                <input type="checkbox" name="toppings" id="chicken" />
+                <label for="chicken">Chicken</label>
+              </p>
+              <p>
+                <input type="checkbox" name="toppings"  id="bacon" checked="checked" />
+                <label for="bacon">Bacon</label>
+              </p>
+              <p>
+                <input type="checkbox"  name="toppings" id="sauce" checked="checked" />
+                <label for="sauce">Sauce</label>
+              </p>
+               
+                <p>
+                  <input type="checkbox" name="toppings"  id="mushroom"  />
+                  <label for="mushroom">Mushroom</label>
+              </p>
+              <p>
+                <input type="checkbox" name="toppings"  id="sausage"  />
+                <label for="sausage">Sausage</label>
+            </p>
+            <p>
+              <input type="checkbox" name="toppings"  id="pep"  />
+              <label for="pep">Pepperoni</label>
+          </p>
+            </div>
+            
+            <div class="form-group">
+              <label for="toppings"><span class="glyphicon glyphicon-shopping-cart"></span> Should we include a drink for you?</label>
+              <select  class="form-control" id="drinks" >
+                <option id ="no" value="0">No</option>
+                <option id ="coke"value="coke">Coca Cola</option>
+                <option id="orange" value="orange">Fanta Orange</option>
+                <option id="pineapple" value="pineapple">Fanta Pineapple</option>
+                <option id="passion" value="passion">Fanta Passion</option>
+                <option id="watermelon" value="watermelon">Fanta Watermelon</option>
               </select>
             </div>
             <div class="form-group">
               <label for="side"> Choose a side</label>
-              <em>(Please select one)</em> <br>
+              <em>(Please select one free of charge)</em> <br>
               <label class="radio-inline">
                 <input type="radio" name="inlineRadioOptions" id="radio1" value="salad"> Salad
               </label>
@@ -138,52 +194,20 @@
                 <input type="radio" name="inlineRadioOptions" id="radio2" value="ketchup"> Ketchup
               </label>
               <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="radio3" value="soup"> Soup
+                <input type="radio" name="inlineRadioOptions" id="radi[o3" value="soup"> Soup
               </label>
             </div>
             <div class="form-group">
-              <label for="toppings"> Extra Toppings</label>
-              <select  class="form-control" id="toppings" >
-                <option>Bacon</option>
-                <option>Cheese</option>
-                <option>Tomatoes</option>
-                <option>Chicken</option>
-                <option>Pineapple</option>
-                <option>Beef</option>
-              </select>
+              <label for="quantity"></span> Quantity</label> <br>
+              <input type="number" name="quantity" id="quantity">
             </div>
-            <div class="form-group">
-              <label for="toppings"><span class="glyphicon glyphicon-shopping-cart"></span> Should we include a drink for you?</label>
-              <select  class="form-control" id="toppings" >
-                <option>No</option>
-                <option>Coca Cola</option>
-                <option>Fanta Orange</option>
-                <option>Fanta Pineapple</option>
-                <option>Fanta Passion</option>
-                <option>Fanta Watermelon</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="quantity"></span> Quantity</label>
-              <select  class="form-control" id="quantity" >
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-              </select>
-            </div>
-              <button type="submit" class="btn btn-block btn-info">Add To Cart 
-                <span class="glyphicon glyphicon-shopping-cart"></span>
+              <button type="submit" class="btn btn-block btn-info" >Add To Cart 
+                
               </button>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-block btn-default " data-dismiss="modal">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
-          </button>
+          <button type="submit" class="btn btn-danger btn-block btn-default " data-dismiss="modal">Cancel </button>
         </div>
       </div>
     </div>
@@ -233,14 +257,47 @@
               </label>
             </div>
             <div class="form-group">
-              <label for="toppings"> Choose Your Toppings</label>
-              <label class="checkbox-inline"><input type="checkbox" value="">Cheese</label>
-              <label class="checkbox-inline"><input type="checkbox" value="">Sauce</label>
-              <label class="checkbox-inline"><input type="checkbox" value="">Bacon</label>
-              
+              <label for="toppings"> Choose Your Toppings</label> <br> <br>
+              <p>
+                <input type="checkbox" id="test1" />
+                <label for="test1">Chicken</label>
+              </p>
+              <p>
+                <input type="checkbox" id="test2" checked="checked" />
+                <label for="test2">Bacon</label>
+              </p>
+              <p>
+                <input type="checkbox" id="test3" checked="checked" />
+                <label for="test3">Sauce</label>
+              </p>
+               
+                <p>
+                  <input type="checkbox" id="test5"  />
+                  <label for="test5">Mushroom</label>
+              </p>
+              <p>
+                <input type="checkbox" id="test6"  />
+                <label for="test6">Sausage</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test7"  />
+              <label for="test7">Bacon</label>
+          </p>
+          <p>
+            <input type="checkbox" id="test4" checked="checked" disabled="disabled"  />
+            <label for="test4">Cheese</label>
+        </p>
+          <p>
+            <input type="checkbox" id="test8" checked="checked" disabled="disabled" />
+            <label for="test8">Onions</label>
+        </p>
+        <p>
+          <input type="checkbox" id="test9" checked="checked" disabled="disabled" />
+          <label for="test9">Pepperoni</label>
+      </p>
             </div>
             <div class="form-group">
-              <label for="toppings"><span class="glyphicon glyphicon-shopping-cart"></span> Should we include a drink for you?</label>
+              <label for="toppings"> Should we include a drink for you?</label>
               <select  class="form-control" id="toppings" >
                 <option>No</option>
                 <option>Coca Cola</option>
@@ -262,19 +319,69 @@
                 <option>7</option>
               </select>
             </div>
-              <button type="submit" class="btn btn-block btn-info">Add To Cart 
-                <span class="glyphicon glyphicon-shopping-cart"></span>
-              </button>
+              <button type="submit" id="addToCart" class="btn btn-block btn-info">Add To Cart </button>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-block btn-default " data-dismiss="modal">
-            <span class="glyphicon glyphicon-remove"></span> Cancel
-          </button>
+          <button type="submit" class="btn btn-danger btn-block btn-default " data-dismiss="modal"> Cancel</button>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
+<div class="container choice">
+  <h4>Your Order is:</h5> 
+  <div id="your-orders">
+    <table class="table table-sm  pizzatable">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Size</th>
+          <th scope="col">Crust</th>
+          <th scope="col">Topping</th>
+          <th scope="col">Drink</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <tbody id="viewOrders">
+        <tr>
+          <td id="pizzaname"></td>
+          <td id="pizzasize"></td>
+          <td id="pizzatopping"></td>
+          <td id="pizzaDrink"></td>
+          <td id="pizzaQuantity"></td>
+          <td id="totals"></td>
+        </tr>                  
+      </tbody>
+    </table>
+    <p id="pizzatotal"></p>
+    <p id="totalbill"></p> 
+    <p id="addedprice">Delivery will cost sh. 400</p>
+    <p id="finallmessage"></p>
+  </div>
+  
+  <button class="btn btn-info check" id="checkout">Checkout</button>
+  <div>
+  <button class="btn btn-orange deliver">Home delivery</button>
+  <button class="btn btn-orange pick">Pick Up</button>
+</div>
+</div>
+<div class="container delivery">
+    <form action="">
+      <div class="form-group">
+        <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+        <input type="number" id="phone" class="form-control mb-3" placeholder="Phone Number">
+        <input type="text" id="location" class="form-control mb-3" placeholder="Delivery location">
+        <button class="btn btn-orange" id="final-order">Place Order</button>
+      </div>
+    </form>
+</div>
+</div>
+</div>
+</div>
 </div>
     
     <h2 >Contact us</h2>  <hr>
@@ -302,8 +409,9 @@
         </div>
       </div>
     </div>
-  </div>
     </div>
+    </div>
+
       
     
 </body>
