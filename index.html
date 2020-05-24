@@ -82,7 +82,7 @@
         </div>
         <div class="col-sm-3">
           <div class="thumbnail">
-            <img src="Images/bacon-mushroom.jpeg" alt="New York">
+            <img src="Images/bacon-mushroom.jpeg" alt="Mushroom pizza">
             <p value="Bacon Mushroom"><strong>Bacon-mushroom pizza</strong></p>
             
             <button class="btn btn-dark orderNow" data-toggle="modal" data-target="#order">Order Now</button>
@@ -90,7 +90,7 @@
         </div>
         <div class="col-sm-3">
           <div class="thumbnail">
-            <img src="Images/pizza6.jpeg" alt="New York">
+            <img src="Images/pizza6.jpeg" alt="Barbeque steak">
             <p value="Barbeque steak"><strong>Barbeque steak</strong></p>
 
             
@@ -99,8 +99,8 @@
         </div>
         <div class="col-sm-3">
           <div class="thumbnail">
-            <img src="Images/barbeque.jpeg" alt="San Francisco">
-            <p value="Barbeque chicken"><strong>Barbeque chicken pizaa</strong></p>
+            <img src="Images/barbeque.jpeg" alt="Barbeque chicken">
+            <p value="Barbeque chicken"><strong>Barbeque chicken pizza</strong></p>
             
             <button class="btn btn-dark orderNow" data-toggle="modal" data-target="#order">Order Now</button>
           </div>
@@ -108,20 +108,30 @@
       </div>
 
         <!-- Modal -->
-  <div class="modal fade" id="order" role="dialog">
+  <div class="modal fade" id="order"  role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4 class="text-center" id="order"> Order Now </h4>
+          <h4 class="text-center"id="order"  > Order Now </h4>
         </div>
         <div class="modal-body">
           <form role="form">
             <div class="form-group">
-              <label for="size"> Size</label>
-              <select  class="form-control" id="size" >
+              <label for="pizzaname"> Flavor</label>
+              <select  class="form-control" id="pizzaname" >
+                <option id="periperi" value="periperi">Chicken Periperi pizza </option>
+                <option id="mushroom" value="mushroom">Bacon-mushroom pizza</option>
+                <option id="steak" value="steak">Barbeque steak </option>
+                <option id="chicken" value="chicken">Barbeque chicken pizaa</option>
+                <option id= "sausage" value="sausage">Sausage and Bacon Pizza</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="pizzasize"> Size</label>
+              <select  class="form-control" id="pizzasize" >
                 <option id="small" value="small">Small </option>
                 <option id="medium" value="medium">Medium </option>
                 <option id="large" value="large">Large </option>
@@ -147,11 +157,11 @@
               <label for="toppings"> Extra Toppings  </label>
               <em>(Extra toppings cost KSH.150 each)</em>
               <p>
-                <input type="checkbox" name="toppings" id="chicken" />
+                <input type="checkbox" name="toppings" id="chicken"/>
                 <label for="chicken">Chicken</label>
               </p>
               <p>
-                <input type="checkbox" name="toppings"  id="bacon" checked="checked" />
+                <input type="checkbox" name="toppings"  id="bacon" />
                 <label for="bacon">Bacon</label>
               </p>
               <p>
@@ -159,9 +169,9 @@
                 <label for="sauce">Sauce</label>
               </p>
                
-                <p>
-                  <input type="checkbox" name="toppings"  id="mushroom"  />
-                  <label for="mushroom">Mushroom</label>
+              <p>
+                <input type="checkbox" name="toppings"  id="mushroom" />
+                <label for="mushroom">Mushroom</label>
               </p>
               <p>
                 <input type="checkbox" name="toppings"  id="sausage"  />
@@ -175,7 +185,7 @@
             
             <div class="form-group">
               <label for="toppings"><span class="glyphicon glyphicon-shopping-cart"></span> Should we include a drink for you?</label>
-              <select  class="form-control" id="drinks" >
+              <select  class="form-control" id="pizzadrinks" >
                 <option id ="no" value="0">No</option>
                 <option id ="coke"value="coke">Coca Cola</option>
                 <option id="orange" value="orange">Fanta Orange</option>
@@ -188,146 +198,29 @@
               <label for="side"> Choose a side</label>
               <em>(Please select one free of charge)</em> <br>
               <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="radio1" value="salad"> Salad
+                <input type="radio" name="inlineRadioOptions" id="salad" value="salad"> Salad
               </label>
               <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="radio2" value="ketchup"> Ketchup
+                <input type="radio" name="inlineRadioOptions" id="ketchup" value="ketchup"> Ketchup
               </label>
               <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="radi[o3" value="soup"> Soup
+                <input type="radio" name="inlineRadioOptions" id="soup" value="soup"> Soup
               </label>
             </div>
             <div class="form-group">
               <label for="quantity"></span> Quantity</label> <br>
               <input type="number" name="quantity" id="quantity">
             </div>
-              <button type="submit" class="btn btn-block btn-info" >Add To Cart 
-                
-              </button>
+              <button type="submit" id="addToCart" class="btn btn-block btn-info" >Add To Cart</button>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-block btn-default " data-dismiss="modal">Cancel </button>
+          <button type="submit" class="btn btn-danger btn-block btn-default " data-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
   </div>
-</div>
-
-      
-      <div class="makeYouOwn text-center">
-        <button class="btn btn-info" data-toggle="modal" data-target="#makeYourOwn">MAKE YOUR OWN PIZZA</button>
-      </div>
-    </div>
-
-        <!-- Modal -->
-  <div class="modal fade" id="makeYourOwn" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4 class="text-center" id="makeYourOwnHead"> Make Your Own Pizza</h4>
-        </div>
-        <div class="modal-body">
-          <form role="form">
-            <div class="form-group">
-              <em class="text-center">We deliver to you all the ingredients you need to assemble your own Pizza at home</em><br><br>
-              <label for="size"> Size of the dough</label>
-              <select  class="form-control" id="size" >
-                <option>Small</option>
-                <option>Medium</option>
-                <option>Large</option>
-                <option>Extra Large</option>
-                <option>Super Duper Large</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="side"> Choose a side</label>
-              <em>(Please select one)</em> <br>
-              <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="salad"> Salad
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="ketchup"> Ketchup
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="soup"> Soup
-              </label>
-            </div>
-            <div class="form-group">
-              <label for="toppings"> Choose Your Toppings</label> <br> <br>
-              <p>
-                <input type="checkbox" id="test1" />
-                <label for="test1">Chicken</label>
-              </p>
-              <p>
-                <input type="checkbox" id="test2" checked="checked" />
-                <label for="test2">Bacon</label>
-              </p>
-              <p>
-                <input type="checkbox" id="test3" checked="checked" />
-                <label for="test3">Sauce</label>
-              </p>
-               
-                <p>
-                  <input type="checkbox" id="test5"  />
-                  <label for="test5">Mushroom</label>
-              </p>
-              <p>
-                <input type="checkbox" id="test6"  />
-                <label for="test6">Sausage</label>
-            </p>
-            <p>
-              <input type="checkbox" id="test7"  />
-              <label for="test7">Bacon</label>
-          </p>
-          <p>
-            <input type="checkbox" id="test4" checked="checked" disabled="disabled"  />
-            <label for="test4">Cheese</label>
-        </p>
-          <p>
-            <input type="checkbox" id="test8" checked="checked" disabled="disabled" />
-            <label for="test8">Onions</label>
-        </p>
-        <p>
-          <input type="checkbox" id="test9" checked="checked" disabled="disabled" />
-          <label for="test9">Pepperoni</label>
-      </p>
-            </div>
-            <div class="form-group">
-              <label for="toppings"> Should we include a drink for you?</label>
-              <select  class="form-control" id="toppings" >
-                <option>No</option>
-                <option>Coca Cola</option>
-                <option>Fanta Orange</option>
-                <option>Fanta Pineapple</option>
-                <option>Fanta Passion</option>
-                <option>Fanta Watermelon</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="quantity"></span> Quantity</label>
-              <select  class="form-control" id="quantity" >
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-              </select>
-            </div>
-              <button type="submit" id="addToCart" class="btn btn-block btn-info">Add To Cart </button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger btn-block btn-default " data-dismiss="modal"> Cancel</button>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>  
 </div>
 
 
@@ -339,7 +232,6 @@
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Size</th>
-          <th scope="col">Crust</th>
           <th scope="col">Topping</th>
           <th scope="col">Drink</th>
           <th scope="col">Quantity</th>
@@ -348,9 +240,9 @@
       </thead>
       <tbody id="viewOrders">
         <tr>
-          <td id="pizzaname"></td>
-          <td id="pizzasize"></td>
-          <td id="pizzatopping"></td>
+          <td id="pizzaName"></td>
+          <td id="pizzaSize"></td>
+          <td id="pizzaTopping"></td>
           <td id="pizzaDrink"></td>
           <td id="pizzaQuantity"></td>
           <td id="totals"></td>
@@ -375,7 +267,7 @@
         <input type="text" id="name" class="form-control mb-3" placeholder="Name">
         <input type="number" id="phone" class="form-control mb-3" placeholder="Phone Number">
         <input type="text" id="location" class="form-control mb-3" placeholder="Delivery location">
-        <button class="btn btn-orange" id="final-order">Place Order</button>
+        <button class="btn btn-info" id="final-order">DONE</button>
       </div>
     </form>
 </div>
