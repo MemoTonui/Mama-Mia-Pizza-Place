@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Fredericka+the+Great&family=Lovers+Quarrel&family=Montserrat:wght@800&family=Nosifer&family=Raleway&family=Rye&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Fredericka+the+Great&family=Lovers+Quarrel&family=Nosifer&family=Raleway&family=Rye&display=swap');
+
 
 *{
     margin: 0;
@@ -245,14 +247,56 @@ background-color: lightskyblue;
 margin-right: 100px;
 
 }
-.checkout:hover{
-  width: 20%;
-  background-color: lightskyblue;
-  margin-left: 100px;
+#checkout{
+  margin-bottom: 100px;
+}
+#checkout:hover{
+  width: 100%;
+  background-color: thistle;
+  margin-bottom: 30px;
 }
 
 input[type=number]{
   width: 100%;
   height: 40px;
   border: 1px solid grey;
+}
+#viewOrders{
+  font-size: 17px;
+  font-weight: 100;
+  font-family: 'Chelsea Market', cursive;
+}
+.delivery{
+  display: none;
+}
+.choice{
+  background: transparent;
+  background-color: rgba(0,0,0,0.65);
+  color: white;
+  margin-top: 50px;
+  display: none;
+  border: none;
+  box-shadow: 0 8px 15px 0 grey ;
+}
+.choose{
+  display: none;
+}
+.pick ,.deliver{
+  width: 40%;
+  
+}
+.deliver:hover{
+  width: 40%;
+}
+.pick:hover{
+  width: 40%;
+  margin-left: 150px;
+}
+#totalbill,#finalMessage{
+  
+  color: white;
+  margin: 30px;
+  padding: 20px;
+  font-family: 'Chelsea Market', cursive;
+  letter-spacing: 0.2em;
 }
