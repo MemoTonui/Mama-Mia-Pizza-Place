@@ -26,7 +26,7 @@ Linda Tonui
 - Open index.html on the browser
 
 ## Bugs And Errors
-Incase of any don't hesitate to reach out to me.
+Webpage is not responsive.
 
  ## Collaboration
 To collaborate with me please reach out using the following email address.

@@ -21,7 +21,7 @@
         <a class="navbar-brand " id="logo" href="#">Mama Mia !!</a>
       </div> 
       </nav>
-      <nav class="navbar navbar-expand-sm navbar-default">
+      <nav class="navbar navbar-expand-sm navbar-default responsive">
         <div class="container">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -31,11 +31,12 @@
             <a class="nav-link" href="#about">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Order</a>
+            <a class="nav-link" href="#menu">Order</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact Us</a>
           </li>
+          
         </ul>
     </div>
   </nav>
@@ -44,8 +45,10 @@
           <div class="text-center content">
           <h1>Welcome to Mama Mia</h1> <br>
           <h4>From our hearts to your mats</h4> <br>
-          <button class="btn btn-primary">View Menu</button>
-          <button class="btn btn-dark">Order Now</button>
+          <div class="btn-home">
+          <button class="btn btn-primary"><a href="#menu">View Menu</a></button>
+          <button class="btn btn-dark"><a href="#order">Order Now</a></button>
+        </div>
         </div>
       </div>
       <div class="row " id="about">
@@ -65,7 +68,7 @@
         </div>
         </div>
         <div class="col-md-4">
-          <img src="Images/pizza11.jpeg" alt="PIZZA">
+          <img src="Images/pizza11.jpeg" id="pizza11" alt="PIZZA">
         </div>
       </div>
       <h2>MENU</h2> <hr>
@@ -224,7 +227,7 @@
 </div>
 
 
-<div class="container choice">
+ <div class="container choice">
   <h4>Your Order is:</h5> 
   <div id="your-orders">
     <table class="table table-sm  pizzatable">

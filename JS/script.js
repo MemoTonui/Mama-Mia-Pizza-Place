@@ -126,7 +126,7 @@ $("button#addToCart").click(function(event){
                     $("#addedprice").hide();
                     $("button.deliver").hide();
                     $("#pizzatotal").hide();
-                    
+                    let deliveryFee= checkout+400;
                     console.log("You will pay sh. "+deliveryFee+" on delivery");
                     $("#totalbill").append("Your bill plus delivery fee is: "+deliveryFee);
                     
@@ -169,7 +169,7 @@ $("button#addToCart").click(function(event){
 
                         $(".delivery").fadeOut(1500)
                         $("#finalMessage").fadeIn(1500);
-                        var finalMessage ="Thank You "+person+". We have recieved your order and it will be delivered to you at "+location+ " within an hour. Prepare sh. "+deliveryFee+ " which we will take on delivery.";
+                        var finalMessage ="Thank You "+person+". We have recieved your order and it will be delivered to you at "+location+ " within an hour. CASH ON DELIVERY.";
                         $("#finalMessage").append(finalMessage);
                         
                         }
