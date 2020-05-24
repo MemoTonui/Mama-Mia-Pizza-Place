@@ -12,7 +12,7 @@ function cart(){
 
 }
 
- $(document).ready(function(){
+$(document).ready(function(){
 
     $(".orderNow").click(function(){
    var pizzaSize = $("#size option:selected").val();
