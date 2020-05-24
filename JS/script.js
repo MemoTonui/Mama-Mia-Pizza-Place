@@ -2,38 +2,47 @@
 var price,drinkPrice,toppingPrice ;
 var totalPrice = 0;
 
-    function pizza(name,size,toppings,drinks,quantity){
+    function pizza(name,size,toppings,drinks,quantity,totalPrice){
         this.name = name
         this.size = size;
         this.toppings= toppings;
         this.drinks = drinks;
         this.quantity = quantity;
+        this.totalPrice = totalPrice
     }
 
 
 
 /*User Logic*/
 $(document).ready(function(){
-
+$(".orderNow").click(function(event){
+event.preventDefault();
+});
     /*Get values from the user*/
-$("#addToCart").click(function(event){
-        
-   var pizzaSize = $("#size option:selected").val();
-   var pizzaToppings = [];
-   $.each($("input [name='toppings']:checked")),function(){
-       pizzaToppings.push($(this).val());
- }
-        console.log(pizzaToppings.join(" "));
-        var quantity = parseInt($("#quantity"));
-        if(quantity == ""){
+$("button#addToCart").click(function(){
+    var name =$("#pizzaname option:selected").val();
+    alert(name);    
+    var pizzaSize = $("#pizzasize option:selected").val();
+   alert(pizzaSize);
+    var pizzaDrinks = $("#pizzadrinks option:selected").val();
+    alert(pizzaDrinks);
+    var pizzaToppings = [];
+        $.each($("input [name='toppings']:checked")),function(){
+       pizzaToppings.push($(this));
+            }
+       console.log(pizzaToppings.join(" "));
+       alert(pizzaToppings);
+    var quantity = parseInt($("#quantity").val());
+    alert(quantity);
+        if(quantity == " "){
             alert("please enter the quantity!");
         }
         else{
             console.log(quantity);
         }
 
-        var name =$("#menu").val();
-        var pizzaDrinks = $("#drinks option:selected").val();
+    
+    
 
                 /*Pizza Size*/
                 switch(pizzaSize){
@@ -51,9 +60,13 @@ $("#addToCart").click(function(event){
                         price = 1200;
                         break;
                     case 'sdLarge' :
-                        price = 1500;   
+                        price = 1500;  
+                        break; 
                 }
+                alert(price);
+
                 console.log(pizzaSize);
+
                 /*Pizza Drinks*/
                 if(pizzaDrinks=="0"){
                     drinkPrice = 0;
@@ -61,28 +74,43 @@ $("#addToCart").click(function(event){
                 else{
                     drinkPrice= 80;
                 }
+                alert(drinkPrice)
                 console.log(pizzaDrinks)
 
                 /*Pizza toppings*/
                 toppingPrice = pizzaToppings.length*150;
-
+                
                 /*Total Price*/
-                totalPrice = price + drinkPrice + toppingPrice;
+                totalPrice =(price + toppingPrice)*quantity;
                 console.log(totalPrice);
+                alert(totalPrice);
 
                 var checkout = 0;
-                checkout = (totalPrice*quantity);
+                checkout = totalPrice+drinkPrice;
+                alert(checkout)
                 console.log(checkout);
 
-                /*Appends the information to the table*/
-                var makeOrder = new pizza(name,pizzaSize,pizzaToppings,drinkPrice,quantity);
-                $("#viewOrders").append('<td id=" pizzaname"'+makeOrder.name+'</td><td id="pizzasize">' + makeOrder.pizzaSize + '</td><td id="pizzatopping">'+makeOrder.pizzaToppings + '</td><td id="pizzaDrink">'+makeOrder.drinkPrice+ '<td id=" pizzaQuantity"'+makeOrder.quantity+'</td><td id="totals">'+makeOrder.total+'</td></tr>');
-                console.log(makeOrder.name);
+                $("#pizzaName").html($("#pizzaname option:selected").val());
+                $("#pizzaSize").html( $("#pizzasize option:selected").val());
+                $("#pizzaDrink").html($("#pizzadrinks option:selected").val());
+                $("#pizzaQuantity").html(parseInt($("#quantity").val()));
+                $("#pizzaTopping").html(pizzaToppings.join(", "));
+                $("#totals").html(checkout);
 
+                /*Appends the information to the table*/
+                var makeOrder = new pizza(name,pizzaSize,pizzaToppings,pizzaDrinks,quantity,totalPrice);
+                $("#viewOrders").append('<tr><td id="pizzaName"'+makeOrder.name+'</td><td id="pizzaSize">' + makeOrder.size + '</td><td id="pizzaTopping">'+makeOrder.toppings + '</td><td id="pizzaDrink">'+makeOrder.drinks+ '<td id=" pizzaQuantity"'+makeOrder.quantity+'</td><td id="totals">'+makeOrder.totalPrice+'</td></tr>');
+                alert(makeOrder.name);
+                alert(makeOrder.size);
+                alert(makeOrder.toppings);
+                console.log(makeOrder.name);
+            });
 
                 
                 /*Total Food Bill*/
+                
                 $("button#checkout").click(function(){ 
+                    alert("work");
                     $("button#checkout").hide();
                     $("button.deliver").slideDown(1000);
                     $("#addedprice").slideDown(1000);
@@ -91,9 +119,11 @@ $("#addToCart").click(function(event){
                 });
 
                 /*Total fee + Delivery*/
-                $("button.deliver").click(function(){
+                $("button.deliver").click(function(event){
+                    event.preventDefault();
+                    alert("work");
                     $(".pizzatable").hide();
-                    $(".choise h2").hide();
+                    $(".choice h2").hide();
                     $(".delivery").slideDown(1000);
                     $("#addedprice").hide();
                     $("button.deliver").hide();
@@ -134,7 +164,8 @@ $("#addToCart").click(function(event){
                     $("#totalbill").append("Your total bill is "+checkoutTotal+".Your food will be ready in less than an hour.Please pick it in time.You number is :" +idNo+"Please present your number to receive your food.");
 
                     });
-                    event.preventDefault();
+                   
                 });
 
-                });
+                
+           
